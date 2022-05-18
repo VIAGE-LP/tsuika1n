@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <title>追加</title>
+    <meta name="Description" content="老顧客優惠輕鬆維持美胸保養！日本夜間育乳術，告別外擴、下垂，立體有感好胸型！白天穿鋼圈內衣，運動時穿運動內衣，睡覺時怎麼能放任胸部走山7~8小時？">
+    <meta name="keywords" content="viage,viage內衣,晚安內衣,夜晚美胸,Viage晚安立體美型內衣">
+    <!-- FB-->
+    <meta property="og:url" content="https://viagebeautybra.com/tsuika1n">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Viage 晚安內衣">
+    <meta property="og:site_name" content="Viage 晚安內衣" />
+    <meta property="og:Description" content="老顧客優惠輕鬆維持美胸保養！日本夜間育乳術，告別外擴、下垂，立體有感好胸型！白天穿鋼圈內衣，運動時穿運動內衣，睡覺時怎麼能放任胸部走山7~8小時？">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="img/01_fv.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="referrer" content="unsafe-url">
+    <!-- 編集削除禁止※スマホ最適化※編集削除禁止 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
+    <!-- 編集削除禁止※スマホ最適化※編集削除禁止 -->
+
+
+    <!-- ▼自由編集箇所▼ -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- ▲自由編集箇所▲ -->
+    <!-- 編集削除禁止※ACCESS　JAVASCRIPT※編集削除禁止 -->
+    <meta name="referrer" content="unsafe-url">
+    <link href=/VCommonFiles/app.min.js rel=preload as=script>
+    <link href=/VCommonFiles/css/app.css rel=preload as=style>
+    <link href=/VCommonFiles/css/app.css rel=stylesheet>
+    <!-- 編集削除禁止※ACCESS　JAVASCRIPT※編集削除禁止 -->
+</head>
+
+<body>
+    <div id="tsuika" style="display: none;">
+        <!-- ▼自由編集箇所▼ -->
+        <div id="wrapper">
+            <div class="fv">
+                <img src="img/01_fv.png" alt="">
+
+                <div class="sns">
+                    <div class="PC">
+                        <a href="https://line.me/R/ti/p/%40fhl1857j" target="blank">
+                            <img src="img/line btn.png" alt="加入好友" style="width:55%;margin:0 auto;">
+                        </a>
+                    </div>
+                    <div class="SP">
+                        <a href="https://line.me/R/oaMessage/@fhl1857j/?獲取更多專屬服務" target="blank">
+                            <img src="img/SP_line btn.png" alt="加入好友" style="width:85%;margin:0 auto;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- ▲自由編集箇所▲ -->
+
+            <!-- contents_standard End -->
+            <!-- 編集削除禁止※ちょっと待ってページ※編集削除禁止 -->
+            <!-- <div id="contents_wait" class="contents" style="display:none;"> -->
+            <div id="contents_wait" class="contents">
+                <!-- ▼ACCESS編集箇所▼ -->
+                <!-- ▲ACCESS編集箇所▲ -->
+                <div id="orderWaitSection">
+                    <div id="wait_action1">
+                        <!-- ▼ACCESS編集箇所▼ -->
+                        <!-- そのまま買います -->
+                        <!-- ▲ACCESS編集箇所▲ -->
+                    </div>
+                    <div id="wait_action2">
+                        <!-- ▼ACCESS編集箇所▼ -->
+                        <!-- ▲ACCESS編集箇所▲ -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- ▲自由編集箇所▲ -->
+        <!-- 編集削除禁止※ACCESS　JAVASCRIPT※編集削除禁止 -->
+        <div id=acs_lp_form></div>
+        <script src="/VCommonFiles/app.min.js?ver=20211019"></script>
+        <!-- 編集削除禁止※ACCESS　JAVASCRIPT※編集削除禁止 -->
+    </div>
+    <div id="tsuika_no">
+        <img id="logo" src="img/logo.svg" alt="">
+        <h2 style="text-align: center;color:red;">很抱歉無法訂購</h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            let orderToken = JSON.parse(localStorage.getItem('orderData'));
+
+            if (orderToken) {
+                let date = new Date(orderToken.data.shipping_date);
+                let today = new Date();
+
+                Date.prototype.addDays = function (days) {
+                    this.setDate(this.getDate() + days);
+                    return this;
+                }
+                date = date.addDays(30);
+
+                if (date <= today) {
+                    $("#tsuika").hide();
+                } else {
+                    $("#tsuika").show();
+                    $("#tsuika_no").hide();
+                }
+
+            } else {
+                $("#tsuika").hide();
+            }
+        });
+    </script>
+</body>
+
+</html>
