@@ -126,14 +126,14 @@
                 date = date.addDays(20);
 
                 if (date <= today) {
-                    $("#tsuika").hide();
+                    $("#tsuika").remove();
                 } else {
                     $("#tsuika").show();
-                    $("#tsuika_no").hide();
+                    $("#tsuika_no").remove();
                 }
 
             } else {
-                $("#tsuika").hide();
+                $("#tsuika").remove();
             }
         });
     </script>
