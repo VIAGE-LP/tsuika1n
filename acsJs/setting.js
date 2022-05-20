@@ -78,16 +78,14 @@ const SETTING_PROMOTION_CODE = 'Viage1n';
 // - cycle
 //  => 定期配送サイクル
 // **************************************************
-const SETTING_PRODUCT_LIST = [
-    {
-        code: "",
-        name: "",
-        isRegular: "0",
-        cycle: "",
-        defaultVal: "",
-        visible: 1
-    }
-];
+const SETTING_PRODUCT_LIST = [{
+  code: '',
+  name: '',
+  isRegular: '0',
+  cycle: '',
+  defaultVal: '',
+  visible: 1
+}];
 
 // **************************************************
 // 初期値の設定
@@ -158,7 +156,7 @@ const SETTING_REQUIRED_ZIP             = '1'; // 郵便番号
 //  => 購入完了時に表示させるページの指定を行う
 // ※未指定時はSystem設定で指定されたページへと遷移する
 // **************************************************
-const SETTING_THANKYOU_PAGE = '';
+const SETTING_THANKYOU_PAGE = 'https://viagebeautybra.com/shopping/thankyounext.html';
 
 // **************************************************
 // [スマホ版] コンビニ選択時の戻り先方法の設定
